@@ -3,7 +3,6 @@ package models;
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoDatabase;
-import java.io.FileReader;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -40,8 +39,8 @@ public class DBConnection
             String url = p.getProperty("url");
             String user = p.getProperty("user");
             String password = p.getProperty("password");
-            conn = DriverManager.getConnection(url, user, password);
-            */
+            conn = DriverManager.getConnection(url, user, password);*/
+            
         } 
         catch (SQLException e) 
         {

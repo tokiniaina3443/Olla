@@ -33,16 +33,16 @@ public class HomeService
             Connection connection = DBConnection.connect();
             if(User.GeneratePhoneNumberAfterEmailConfirmation(connection, token))
             {
-                return "check email succes";
+                return "<h1 style='text-align:center'>your email was verified</h1>";
             }
             else
             {
-                return "check email error";
+                return "<h1 style='text-align:center'>error server</h1>";
             }
         }
         else
         {
-            return "check email error";
+            return "<h1 style='text-align:center'>error server</h1>";
         }
     }
     

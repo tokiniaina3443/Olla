@@ -68,9 +68,7 @@ public class Util {
    
     public static String GetConfirmedSignUpUrl() throws FileNotFoundException, IOException
     {
-        /*FileReader reader = new FileReader("src\\main\\resources\\db.properties");
-        Properties p = new Properties();  
-        p.load(reader); */
+        //return "http://localhost:8081/confirmSignUp";
         return "https://ollamobile.herokuapp.com/confirmSignUp";
     }
     
