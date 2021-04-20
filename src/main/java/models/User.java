@@ -711,7 +711,7 @@ public class User
             {
                 connection = DBConnection.connect();
             }
-            String sql = "select * from v_mobilemoney where idUser =" + this.getId() + " and (transactiontype = 'deposit' and confirmed = true) or (transactiontype<> 'deposit') order by date desc;";
+            String sql = "select * from v_mobilemoney where v_mobilemoney.idUser = " + this.getId() + " and ((transactiontype = 'deposit' and confirmed = true) or (transactiontype<> 'deposit')) order by date desc;";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             ResultSet resultSet = preparedStatement.executeQuery();
             while(resultSet.next())
