@@ -568,8 +568,14 @@ public class User
                 connection = DBConnection.connect();
             }
             String token = this.SignUp(connection);
-            Email mail = new Email("appelolla@gmail.com","smtp.gmail.com","olla123456", this.email, "Email confirmation", null);
-            ans = Email.SendEmail(mail, url, token);
+            if(token.compareTo("") != 0)
+            {
+                ans = User.GeneratePhoneNumberAfterEmailConfirmation(connection, token);
+            }
+            else
+            {
+                ans = false;
+            }
         }
         catch(Exception ex)
         {
